@@ -16,17 +16,69 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    
+    <!-- Style Sheet? -->
+     <link rel="stylesheet" href="style.css">
     <style>
-        *{
-            font-family: "Inter", sans-serif;;
-        }
+        
     </style>
 </head>
 
 <body>
-
-
+    <header class="primary-bg-color">
+        <div class="lg:w-[85%] mx-auto">
+            <div class="navbar primary-bg-color text-white ">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content primary-bg-color  z-1 mt-3 w-52 p-2 shadow">
+                            <li class="bg-base-100 text-[#15803D] hover:hover-primary-bg mb-2 rounded-lg "><a>About</a>
+                            </li>
+                            <li class="bg-base-100 text-[#15803D] hover:hover-primary-bg mb-2 rounded-lg"><a>Gellery</a>
+                            </li>
+                            <li class="bg-base-100 text-[#15803D] hover:hover-primary-bg mb-2 rounded-lg"><a>Plant a
+                                    Tree</a></li>
+                        </ul>
+                    </div>
+                    <a class="  hover:bg-[#0b4c2350] px-5 py-2 rounded-lg text-lg text-[#15803D] text-white "> Green
+                        Earth</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>About</a></li>
+                        <li><a>Gellery</a></li>
+                        <li><a>Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <button
+                        class="bg-[#FACC15] text-[#15803D] px-5 py-2 rounded-lg font-semibold hover:bg-[#bb980a] hover:text-[#0aab45] ">
+                        Plant a Tree</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner bg-[#CFF0DC]">
+            <div class="banner-div">
+                <div class="banner-content-div text-align-center py-10 lg:py-18 ">
+                    <h1 class="text-[rgba(31, 41, 55, 1)] text-[32px] font-bold mb-2 ">Plant a Tree, Grow a Future</h1>
+                    <p class="text-[rgba(31, 41, 55, 1)] text-[13px] font-normal lg:mb-6 mb-3 ">Join our mission to plant 1 million trees and make
+                        the Earth greener for futur <br> generations.</p>
+                    <button
+                        class="bg-[#FACC15] text-[#15803D] px-3 py-2 rounded-lg hover:bg-[#bb980a] hover:text-[#0aab45]">
+                        Get Involved
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 
 
 

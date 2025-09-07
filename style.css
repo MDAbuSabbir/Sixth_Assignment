@@ -1,0 +1,36 @@
+* {
+            font-family: "Inter", sans-serif;
+            ;
+        }
+
+        .primary-bg-color {
+            background-color: #15803D;
+        }
+
+        .hover-primary-bg {
+            background-color: #053918;
+        }
+
+        .secondary-button {
+            background-color: #FACC15;
+        }
+
+        .fd {
+            color: #0aab45;
+            color: #bb980a;
+        }
+        .text-align-center{
+            text-align: center;
+        }
+        .banner-div{
+            background-image: url(./assets/hero-leaf1.png) , url(./assets/hero-leaf2.png);
+            background-position: top 25px left -30px , top 25px right -30px;
+            background-repeat: no-repeat;
+            background-size: 32%;
+        }
+
+        @media screen and (max-width: 600px){
+            .banner-div{
+                background-image: none;
+            }
+        }
