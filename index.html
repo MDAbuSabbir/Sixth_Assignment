@@ -132,8 +132,16 @@
             <div>
                 <h2 class="section-header " style="color: white;">Plant a Tree Today</h2>
             </div>
-            <form action="" class="bg-[#13ac4b]">
-                <input type="text">
+            <form action="" class="bg-[#13ac4b] w-[90%] lg:w-[650px] mx-auto rounded-xl p-10 flex flex-col">
+                <input type="text" placeholder="Your Name" class="form-inputs">
+                <input type="email" placeholder="Your Email Address" class="form-inputs">
+                <select id="donate-trees" class="form-inputs" >
+                    <option value="volvo" selected>Number of Trees</option>
+                    <option value="saab">1 Tree $5</option>
+                    <option value="mercedes">5 Tree $25</option>
+                    <option value="audi">10 Tree $50</option>
+                </select>
+                <button class="bg-[#FACC15] text-[#15803D] px-3 py-2 rounded-xl hover:bg-[#bb980a] hover:text-[#0aab45]"> Donate Now</button>
             </form>
         </section>
     </main>
