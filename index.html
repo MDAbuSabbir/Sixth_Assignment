@@ -88,9 +88,9 @@
             </div>
             <div id="dynamic-section" class="grid lg:grid-cols-6 w-[86%] mx-auto">
                 <div id="cateries-container" class="col-span-1 mb-6">
-                    <h3 class="mb-4 font-bold text-[32px] text-[#15803D] ">Categories</h3>
+                    <h3 class="mb-4 font-bold text-[32px] text-[#15803D] text-center">Categories</h3>
                     <ul id="allTree-ul">
-                         <li onclick="loadPlants()" class="font-medium hover:bg-[#15803D] hover:text-white px-2.5 py-2 rounded-[20px] w-full "> All Trees</li>
+                         <li onclick="loadPlants()" class="font-medium  text-center hover:bg-[#15803D]  hover:text-white px-2.5 py-2 rounded-[20px] w-full "> All Trees</li>
                     </ul>
                     <ul id="categoris-ul" class="">
                         
@@ -174,7 +174,22 @@
         <p class="text-white">© 2025 Green Earth. All Rights Reserved.</p>
     </footer>
 
+    <!-- Open the modal using ID.showModal() method -->
 
+
+    <!-- showModal() -->
+<dialog id="openTreeDetails" class="modal modal-bottom sm:modal-middle">
+  <div id="modal-container" class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
 
 
