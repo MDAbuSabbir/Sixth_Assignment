@@ -83,8 +83,29 @@
         </section>
 
         <section class="bg-[#F0FDF4]">
-            <h2 class="section-header"> Choose Your Trees section will be here</h2>
+            <div>
+                <h2 class="section-header"> Choose Your Trees section will be here</h2>
+            </div>
+            <div id="dynamic-section" class="grid lg:grid-cols-6 max-w-[1650px] mx-auto">
+                <div id="cateries-container" class="col-span-1">
+                    <h3 class="mb-4 font-bold text-[32px]">Categories</h3>
+                    <ul>
+                         <li class="font-medium hover:bg-[#15803D] hover:text-white px-2.5 py-2 rounded-lg"> All Trees</li>
+                    </ul>
+                    <ul id="categoris-ul">
+                        
+                    </ul>
+                </div>
+                <div id="item-card-container" class="col-span-4">
+
+                </div>
+                <div id="your-cart-container" class="col-span-1">
+
+                </div>
+            </div>
         </section>
+
+
 
         <section class="about-the-campaign bg-[#F0FDF4] py-24">
             <div class=" ">
@@ -128,20 +149,22 @@
             </div>
         </section>
 
-        <section  class="bg-[#15803D] py-24">
+        <section class="bg-[#15803D] py-24">
             <div>
                 <h2 class="section-header " style="color: white;">Plant a Tree Today</h2>
             </div>
             <form action="" class="bg-[#13ac4b] w-[90%] lg:w-[650px] mx-auto rounded-xl p-10 flex flex-col">
                 <input type="text" placeholder="Your Name" class="form-inputs">
                 <input type="email" placeholder="Your Email Address" class="form-inputs">
-                <select id="donate-trees" class="form-inputs" >
+                <select id="donate-trees" class="form-inputs">
                     <option value="volvo" selected>Number of Trees</option>
                     <option value="saab">1 Tree $5</option>
                     <option value="mercedes">5 Tree $25</option>
                     <option value="audi">10 Tree $50</option>
                 </select>
-                <button class="bg-[#FACC15] text-[#15803D] px-3 py-2 rounded-xl hover:bg-[#bb980a] hover:text-[#0aab45]"> Donate Now</button>
+                <button
+                    class="bg-[#FACC15] text-[#15803D] px-3 py-2 rounded-xl hover:bg-[#bb980a] hover:text-[#0aab45]">
+                    Donate Now</button>
             </form>
         </section>
     </main>
