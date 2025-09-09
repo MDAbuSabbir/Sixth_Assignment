@@ -81,7 +81,6 @@ const displayAllPlants =(plants) =>{
 }
 
    const treeCart = (name ,price, id) =>{
-    console.log(name, price);
     yourCartContainer.innerHTML += `
     <div  class="px-3 py-2 flex justify-between items-center bg-[#F0FDF4] mb-2 rounded-xl ">
                             <div class="">
