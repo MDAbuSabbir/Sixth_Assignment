@@ -82,7 +82,7 @@
             </div>
         </section>
 
-        
+
 
         <section class="bg-[#F0FDF4] py-12">
             <div>
@@ -93,7 +93,8 @@
                     <h3 class="mb-4 font-bold text-[32px] text-[#15803D] text-center">Categories</h3>
                     <ul id="allTree-ul">
                         <li onclick="loadPlants()"
-                            class="font-medium  flex justify-center items-center lg:flex-none hover:bg-[#15803D]  hover:text-white px-2.5 py-2 rounded-[20px] w-full ">All Trees</li>
+                            class="font-medium  flex justify-center items-center lg:flex-none hover:bg-[#15803D]  hover:text-white px-2.5 py-2 rounded-[20px] w-full ">
+                            All Trees</li>
                     </ul>
                     <ul id="categoris-ul" class="">
 
@@ -101,18 +102,29 @@
                 </div>
 
                 <div id="tree-card-container" class="col-span-4 lg:grid grid-cols-3 gap-8">
-                    <div class="flex justify-center items-center "><span class="loading loading-bars loading-xl "></span></div>
+                    <div class="flex justify-center items-center "><span
+                            class="loading loading-bars loading-xl "></span></div>
                 </div>
-                <div id="your-cart-container" class="col-span-1  h-fit px-4 bg-white ">
-                    <h2 class="font-bold text-[28px]">Your Cart</h2>
+                <div id="your-cart-container" class="col-span-1  h-fit px-4 pb-4 bg-white  ">
+                    <div>
+                        <h2 class="font-bold text-[28px]">Your Cart</h2>
+                    </div>
+                    <div id="yourCartContainer" class="flex flex-col-reverse">
+                        
+                    </div>
+                    <div id="totalPrice"
+                            class="border-t-2 border-gray-200 mt-2 flex justify-between font-bold px-3 py-2">
+                            <h3>Total</h3>
+                            <h3>৳<span id="totalTaka">0</span></h3>
+                    </div>
                 </div>
             </div>
         </section>
 
-        
+
 
         <section class="about-the-campaign bg-[#F0FDF4] py-12">
-            <div >
+            <div>
                 <h2 class="section-header "> About The Campaign</h2>
             </div>
             <div class="w-[85%] lg:w-[60%] mx-auto lg:grid grid-cols-2">
@@ -161,10 +173,10 @@
                 <input type="text" placeholder="Your Name" class="form-inputs">
                 <input type="email" placeholder="Your Email Address" class="form-inputs">
                 <select id="donate-trees" class="form-inputs">
-                    <option  selected>Number of Trees</option>
-                    <option >1 Tree $5</option>
-                    <option >5 Tree $25</option>
-                    <option >10 Tree $50</option>
+                    <option selected>Number of Trees</option>
+                    <option>1 Tree $5</option>
+                    <option>5 Tree $25</option>
+                    <option>10 Tree $50</option>
                 </select>
                 <button
                     class="bg-[#FACC15] text-[#15803D] px-3 py-2 rounded-xl hover:bg-[#bb980a] hover:text-[#0aab45]">
@@ -203,7 +215,7 @@
         </div>
     </dialog>
 
-    
+
 
     <script src="./index.js"></script>
 </body>

@@ -7,6 +7,9 @@ function getID(id){
     const allTreeContainer = getID("tree-card-container")
     const openTreeDetails = getID("openTreeDetails")
     const modalContainer = getID("modal-container")
+    const yourCartContainer = getID("yourCartContainer")
+    const totalTaka = getID("totalTaka")
+    const removeButtons = document.getElementsByClassName("removeButtons")
 
 const loadCategory = () =>{
     const url ="https://openapi.programming-hero.com/api/categories";
@@ -56,7 +59,7 @@ const displayAllPlants =(plants) =>{
     allTreeContainer.innerHTML = "";
     plants.forEach(plant =>{
         allTreeContainer.innerHTML += `
-        <div class="tree-card min-h-[420px] max-h-[450px] col-span-1 bg-white mb-5 p-5">
+        <div   class="tree-card min-h-[420px] max-h-[450px] col-span-1 bg-white mb-5 p-5">
                         <figure class="rounded-lg mb-6">
                             <img src="${plant.image}" class="w-full h-40 object-cover rounded-lg"/>
 
@@ -67,15 +70,45 @@ const displayAllPlants =(plants) =>{
                         </p>
                         <div class="flex justify-between items-center">
                             <h4 class="bg-[#DCFCE7] text-[#15803D] rounded-xl py-2 px-3">${plant.category}</h4>
-                            <h4 class="font-bold text-[14px]">৳<span id="tree-price">${plant.price}</span></h4>
+                            <h4 class="font-bold text-[14px]">৳<span >${plant.price}</span></h4>
                         </div>
-                        <button class="bg-[#15803D] text-white flex justify-center items-center w-full py-3 rounded-xl mt-3 hover:bg-[#075524]"> Add to Cart </button>
+                        <button  onclick="treeCart('${plant.name}' ,${plant.price}, ${plant.id})" class="bg-[#15803D] text-white flex justify-center items-center w-full py-3 rounded-xl mt-3 hover:bg-[#075524]"> Add to Cart </button>
                     </div>
        `;
     })
     
     // console.log(plants)
 }
+
+   const treeCart = (name ,price, id) =>{
+    console.log(name, price);
+    yourCartContainer.innerHTML += `
+    <div  class="px-3 py-2 flex justify-between items-center bg-[#F0FDF4] mb-2 rounded-xl ">
+                            <div class="">
+                                <h3 class="mb-3 font-bold"> ${name}</h3>
+                                <p> ৳<span>${price}</span></p>
+                            </div>
+                            <div>
+                                <h3 onclick="removeCart(${price} , ${id}, this)" class="cursor-pointer removeButtons">❌</h3>
+                            </div>
+                        </div>                   
+    `;
+    totalCalculation(price)
+   }
+   const totalCalculation = (price) =>{
+    let currentTotal = Number(totalTaka.innerText) || 0;
+    let newTotal = currentTotal + price;
+    totalTaka.innerText = newTotal;
+   }
+const removeCart = (price, id, btn) =>{
+    
+    let currentTotal = Number(totalTaka.innerText)
+    let newTotal = currentTotal - price;
+    totalTaka.innerText = newTotal;
+    btn.parentElement.parentElement.remove();
+
+}
+            
 
 const  loadTreeDetails= (id) =>{
     const url =`https://openapi.programming-hero.com/api/plant/${id}`;
@@ -117,7 +150,9 @@ const showTreeDetails = (plants) =>{
 }
 
 
-loadCategory()
-loadPlants()
+document.addEventListener("DOMContentLoaded", () => {
+    loadCategory();
+    loadPlants();
+});
 
 
