@@ -60,15 +60,32 @@
             color: white;
             border-radius: 20px;
         }
+        #allTree-ul li{
+        
+        }
          @media screen and (max-width: 600px){
+            /* #cateries-container{
+                width: 85% !important;
+                margin-left: 10%;
+            } */
             #categoris-ul{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             font-size: 16px;
+            grid-gap: 20px;
             }
             #categoris-ul li{
                 display: flex;
                 align-items: center;
+                
+            }
+            /* #allTree-ul li{
+                margin-left: 8%
+            } */
+            section {
+                padding-top: 50px;
+                padding-bottom: 40px;
+
             }
             
         }
